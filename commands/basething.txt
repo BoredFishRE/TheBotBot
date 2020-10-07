@@ -1,0 +1,14 @@
+const { MessageEmbed } = require("discord.js");
+const Discord = require("discord.js");
+
+module.exports = {
+  name: "",
+  description: "",
+  execute(message, args, client) {
+    let embed = new MessageEmbed()
+        .setColor("#42f2f5")
+        .setFooter("Requested by " + message.author.username, message.author.displayAvatarURL())
+    message.channel.send(embed)
+    
+  },
+};
