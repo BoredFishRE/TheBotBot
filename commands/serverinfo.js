@@ -11,7 +11,7 @@ module.exports = {
       .setThumbnail(guild.iconURL())
       .setFooter(
         "Requested by " + message.author.username,
-        message.author.displayAvatarURL()
+        message.author.displayAvatarURL({ format: "gif", dynamic: "true"})
       )
       .addField("Server Name", guild.name)
       .addField("Server Owner", guild.owner)

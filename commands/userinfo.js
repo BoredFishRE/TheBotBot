@@ -7,11 +7,11 @@ module.exports = {
   execute(message, args, client) {
     let embed = new MessageEmbed()
       .setColor("#42f2f5")
-      .setThumbnail(message.author.displayAvatarURL())
+      .setThumbnail(message.author.displayAvatarURL({ format: "gif", dynamic: "true" }))
       .setTitle("Userinfo of " + message.author.username)
       .setFooter(
         "Requested by " + message.author.username,
-        message.author.displayAvatarURL()
+        message.author.displayAvatarURL({ format: "gif", dynamic: "true"})
       )
       .addField("User created at?", message.author.createdAt)
       .addField("User Tag", message.author.tag)
